@@ -959,7 +959,7 @@ char *get_memory_page(u64 vaddr) {
     return (char *)page->addr;
 }
 
-inline void *get_memory(u64 vaddr) {
+void *get_memory(u64 vaddr) {
     char *page = get_memory_page(vaddr);
     return page ? &page[vaddr & DYN_PAGE_MASK] : NULL;
 }

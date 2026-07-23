@@ -2,7 +2,7 @@
 
 #define IS_SLASH(s) (s == '/')
 
-void ap_getparents(char *name)
+extern "C" void ap_getparents(char *name)
 {
     char *next;
     int l, w, first_dot;
